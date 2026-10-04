@@ -614,8 +614,10 @@ function renderUnit(){const u=UNITS[curU];
 const syncTools=()=>{$("#sndBtn").textContent=S.sound?"🔔 音效開":"🔕 音效關";$("#rateBtn").textContent=S.slow?"🐢 慢速":"🐇 正常";};
 $("#sndBtn").onclick=()=>{S.sound=!S.sound;save();syncTools();sfx("tick");};
 $("#rateBtn").onclick=()=>{S.slow=!S.slow;save();syncTools();say(S.slow?"slow":"normal");};
-$("#themeBtn").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=dark?"light":"dark";$("#themeBtn").textContent=dark?"🌙":"☀️";try{localStorage.setItem(KEY+"-theme",r.dataset.theme);}catch(e){}};
-try{const th=localStorage.getItem(KEY+"-theme");if(th){document.documentElement.dataset.theme=th;$("#themeBtn").textContent=th==="dark"?"☀️":"🌙";}}catch(e){}
+$("#themeBtn").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme==="dark";r.dataset.theme=dark?"light":"dark";$("#themeBtn").textContent=dark?"🌙":"☀️";try{localStorage.setItem(KEY+"-theme",r.dataset.theme);}catch(e){}};
+(function(){let th=null;try{th=localStorage.getItem(KEY+"-theme");}catch(e){}
+ if(!th)th=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+ document.documentElement.dataset.theme=th;$("#themeBtn").textContent=th==="dark"?"☀️":"🌙";})();
 
 /* decorative flowers in hero */
 (function(){const h=$("#hero");const f=(x,y,s,o)=>`<svg class="flower" style="left:${x};top:${y};width:${s}px;opacity:${o}" viewBox="0 0 40 40" aria-hidden="true">${[0,72,144,216,288].map(a=>`<ellipse cx="20" cy="10" rx="7" ry="9" fill="#fff" transform="rotate(${a} 20 20)"/>`).join("")}<circle cx="20" cy="20" r="4.5" fill="#F3D88A"/></svg>`;
