@@ -137,6 +137,7 @@ button:focus-visible{outline:3px solid var(--lilac);outline-offset:2px}
 .refs{display:flex;flex-wrap:wrap;gap:8px}
 .ref{border:1.5px solid var(--gold);background:var(--paper);border-radius:999px;padding:4px 12px;font-size:14.5px}
 .ref::before{content:"🔊 ";font-size:12px}
+.lm{font-size:13px;color:var(--ink2);text-decoration:underline;text-underline-offset:3px;padding:4px 2px}
 .prog{font-size:14px;color:var(--ink2);margin:0 0 10px}
 
 /* phrases */
@@ -475,23 +476,25 @@ addEventListener("scroll",()=>pop.classList.remove("show"),{passive:true});
 function hlEx(ex,form){return esc(ex).replace(new RegExp("\\b("+form+"\\w*)","i"),"<mark>$1</mark>");}
 function renderVocab(u,box){
  const f=S.flipped[u.id]||[];
- box.innerHTML=`<p class="hint">點卡片翻面看中文、英英解釋和例句；🔊 是美式發音，📖 可開 Longman 字典聽真人發音。</p>
+ box.innerHTML=`<p class="hint">點卡片翻面看中文、英英解釋和例句；🔊 是美式發音。翻到背面，右下角的小字連結可以開 Longman 聽真人發音。</p>
  <p class="prog" id="vp-${u.id}"></p>
  <div class="grid">${u.vocab.map((v,i)=>`<div class="board card ${f.includes(i)?"":""}" data-i="${i}" role="button" tabindex="0">
   <div class="w">${v[0]}</div><div class="kk">[${v[1]}]<span class="pos">${v[2]}</span></div>
-  <div class="row"><button class="mini say" data-s="${esc(v[0])}">發音</button><a class="mini" style="text-decoration:none" href="${longman(v[0])}" target="_blank" rel="noopener">📖 Longman</a></div>
+  <div class="row"><button class="mini say" data-s="${esc(v[0])}">發音</button></div>
   <div class="back"><div class="zh">${v[3]}</div><div class="def">${esc(v[4])}</div>
    <div class="ex">${hlEx(v[5],v[8]||v[0])}</div><div class="exzh">${v[6]}</div>
    <div class="row"><button class="mini say" data-s="${esc(v[5])}">例句</button></div>
-   <div class="fam">🌱 ${v[7]}</div></div>
+   <div class="fam">🌱 ${v[7]}</div>
+   <div class="row" style="justify-content:flex-end;margin-top:10px"><a class="lm" href="${longman(v[0])}" target="_blank" rel="noopener">📖 到 Longman 聽真人發音 ↗</a></div></div>
   <span class="tap">點我翻面 ✦</span></div>`).join("")}</div>
  <h3 class="sec-t">參考字彙</h3><div class="refs">${u.refs.map(r=>`<button class="ref" data-s="${esc(r[0])}">${r[0]}　<small>${r[1]}</small></button>`).join("")}</div>`;
  const prog=()=>{$("#vp-"+u.id).textContent=`已翻開 ${(S.flipped[u.id]||[]).length} / ${u.vocab.length} 張`;};prog();
- box.onclick=e=>{const s=e.target.closest("[data-s]");if(s){say(s.dataset.s);return;}if(e.target.closest("a"))return;
+ box.onclick=e=>{const s=e.target.closest("[data-s]");if(s){say(s.dataset.s);return;}
+  const a=e.target.closest("a");if(a){const c0=a.closest(".card");if(c0&&Date.now()-(+c0.dataset.t||0)<700)e.preventDefault();return;}
   const c=e.target.closest(".card");if(!c)return;flipCard(c,u,prog);};
  box.onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("card")){e.preventDefault();flipCard(e.target,u,prog);}};
 }
-function flipCard(c,u,prog){const i=+c.dataset.i;sfx("flip");
+function flipCard(c,u,prog){const i=+c.dataset.i;c.dataset.t=Date.now();sfx("flip");
  const go=()=>{c.classList.toggle("open");};
  if(RM)go();else c.animate([{transform:"rotateY(0)"},{transform:"rotateY(90deg)"}],{duration:140}).onfinish=()=>{go();c.animate([{transform:"rotateY(-90deg)"},{transform:"rotateY(0)"}],{duration:160});};
  const arr=S.flipped[u.id]=S.flipped[u.id]||[];
