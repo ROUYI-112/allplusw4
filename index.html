@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>柔柔的英文魔法帖｜Unit 13–14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7DDD7; --bg2:#F1CDC6; --paper:#FFF9F4; --paper2:#FDEFEA;
+  --ink:#4B2A2F; --ink2:#7A5257; --ribbon:#8E2238; --ribbon2:#B23A50;
+  --gold:#C99541; --goldL:#F5DE9C; --lilac:#A893DA; --lilacL:#EEE7FB;
+  --ok:#3F9C6B; --okL:#DDF3E4; --bad:#D9526D; --badL:#FBE0E6; --hl:#FFE7A0;
+  --shadow:0 14px 30px -18px rgba(142,34,56,.55); --onR:#FFFFFF;
+  --font:"Zen Maru Gothic","PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  --hand:"Klee One","Zen Maru Gothic","PingFang TC","Microsoft JhengHei",cursive;
+}
+:root[data-theme="dark"]{
+  --bg:#2A1720; --bg2:#341D28; --paper:#3B2430; --paper2:#45293A;
+  --ink:#F7E7E2; --ink2:#D6B7B9; --ribbon:#F08AA0; --ribbon2:#F5A7B7;
+  --gold:#E2B65C; --goldL:#6A4E2A; --lilac:#B9A6EC; --lilacL:#3F3352;
+  --ok:#7FD3A0; --okL:#23432F; --bad:#F08AA0; --badL:#4A2430; --hl:#5E4A1E;
+  --shadow:0 14px 30px -18px rgba(0,0,0,.8); --onR:#3A1422;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2A1720; --bg2:#341D28; --paper:#3B2430; --paper2:#45293A;
+    --ink:#F7E7E2; --ink2:#D6B7B9; --ribbon:#F08AA0; --ribbon2:#F5A7B7;
+    --gold:#E2B65C; --goldL:#6A4E2A; --lilac:#B9A6EC; --lilacL:#3F3352;
+    --ok:#7FD3A0; --okL:#23432F; --bad:#F08AA0; --badL:#4A2430; --hl:#5E4A1E;
+    --shadow:0 14px 30px -18px rgba(0,0,0,.8); --onR:#3A1422;
+  }
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;
+  background-image:radial-gradient(circle at 12px 12px, rgba(255,255,255,.55) 2.2px, transparent 2.6px),radial-gradient(circle at 42px 38px, rgba(255,255,255,.35) 1.6px, transparent 2px);
+  background-size:58px 58px;}
+button{font:inherit;color:inherit;cursor:pointer}
+::selection{background:var(--lilac);color:#fff}
+mark,.nc,.gl,.tr{-webkit-text-fill-color:currentColor}
+button:focus-visible{outline:3px solid var(--lilac);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:18px 16px 80px}
+
+/* shikishi board */
+.board{background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(135deg,#F7E3A6,#C8913A 30%,#F9EBC0 55%,#B5802F 80%,#F3D88A) border-box;
+  border:6px solid transparent;border-radius:5px;box-shadow:var(--shadow);position:relative}
+.board.inner::after{content:"";position:absolute;inset:8px;border:1.5px solid rgba(255,255,255,.85);border-radius:2px;pointer-events:none}
+:root[data-theme="dark"] .board.inner::after{border-color:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{margin:6px auto 22px;padding:22px 22px 18px;overflow:hidden;
+  background:linear-gradient(160deg,#FBE3DE 0%,#F6CFC9 100%) padding-box,linear-gradient(135deg,#F7E3A6,#C8913A 30%,#F9EBC0 55%,#B5802F 80%,#F3D88A) border-box}
+:root[data-theme="dark"] .hero{background:linear-gradient(160deg,#4A2A38,#3A2030) padding-box,linear-gradient(135deg,#F7E3A6,#C8913A 30%,#F9EBC0 55%,#B5802F 80%,#F3D88A) border-box}
+.hero .water{position:absolute;top:10px;left:-10px;right:-10px;white-space:nowrap;font-size:20px;letter-spacing:.06em;color:rgba(255,255,255,.75);font-weight:500;pointer-events:none}
+:root[data-theme="dark"] .hero .water{color:rgba(255,255,255,.12)}
+.hero h1{font-family:var(--hand);font-weight:600;font-size:clamp(34px,7vw,58px);line-height:1.15;margin:34px 0 4px;color:var(--ink);transform:rotate(-3deg);transform-origin:left;letter-spacing:.02em}
+.hero h1,.hero .sub,.stats,.stickers{position:relative;z-index:1}
+.hero .sub{margin:6px 0 16px;color:var(--ink2);font-size:15px}
+.hero .bow{position:absolute;right:18px;top:26px;width:84px;transform:rotate(8deg)}
+.flower{position:absolute;pointer-events:none}
+.stats{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lv{display:flex;align-items:center;gap:10px;background:var(--paper);border-radius:999px;padding:6px 14px 6px 6px;flex:1 1 260px;min-width:0}
+.lv b{background:var(--ribbon);color:var(--onR);border-radius:999px;padding:2px 10px;font-size:14px;white-space:nowrap}
+.bar{flex:1;height:12px;border-radius:99px;background:var(--paper2);overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--goldL),var(--gold));border-radius:99px;transition:width .5s cubic-bezier(.3,1.4,.5,1)}
+.lv small{font-size:13px;color:var(--ink2);white-space:nowrap}
+.pill{background:var(--paper);border-radius:999px;padding:6px 14px;font-size:14px;white-space:nowrap}
+.combo b{color:var(--ribbon);font-size:17px}
+.combo.hot{animation:pop .35s}
+@keyframes pop{50%{transform:scale(1.18)}}
+.tools{display:flex;gap:8px;margin-left:auto}
+.ic{border:0;background:var(--paper);border-radius:12px;padding:6px 11px;font-size:14px}
+.stickers{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.stk{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:20px;background:var(--paper);border:2px dashed var(--ink2);opacity:.35;filter:grayscale(1);position:relative;border-width:2px;padding:0}
+.stk.on{opacity:1;filter:none;border:2px solid var(--gold);box-shadow:0 0 0 3px var(--goldL)}
+.stk.new{animation:stamp .6s}
+@keyframes stamp{0%{transform:scale(2.2) rotate(-25deg);opacity:0}60%{transform:scale(.9)}100%{transform:scale(1)}}
+
+/* tabs */
+.units{display:flex;gap:6px;margin:0 0 -6px 12px;position:relative;z-index:2;flex-wrap:wrap}
+.unit-tab{border:0;padding:10px 18px 14px;border-radius:12px 12px 0 0;background:var(--bg2);color:var(--ink2);font-weight:700;font-size:15px}
+.unit-tab[aria-selected="true"]{background:var(--ribbon);color:var(--onR)}
+.unit-head{padding:20px 20px 6px;border-radius:5px 5px 0 0}
+.unit-head h2{margin:0;font-size:clamp(21px,3.6vw,28px);line-height:1.3}
+.unit-head p{margin:4px 0 0;color:var(--ink2)}
+.subs{display:flex;gap:6px;overflow-x:auto;padding:14px 18px 4px;scrollbar-width:none}
+.subs::-webkit-scrollbar{display:none}
+.sub-tab{border:1.5px solid var(--gold);background:transparent;border-radius:999px;padding:6px 15px;white-space:nowrap;font-size:15px}
+.sub-tab[aria-selected="true"]{background:var(--goldL);border-color:var(--gold);font-weight:700}
+.panel{padding:12px 20px 24px}
+.sec-t{font-size:20px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+.sec-t::before{content:"❀";color:var(--ribbon2)}
+.hint{color:var(--ink2);font-size:14px;margin:-4px 0 12px}
+
+/* passage */
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;margin:6px 0 10px}
+.legend span{padding:2px 8px;border-radius:6px}
+.note{background:var(--lilacL);border-radius:14px;padding:12px 16px;margin:12px 0;font-size:15px}
+.note h4{margin:0 0 4px;font-size:16px}
+.para{position:relative;padding:12px 0 12px;border-bottom:1.5px dashed var(--bg2)}
+.para p{margin:0;font-size:18px;line-height:2}
+.para .ctl{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.mini{border:0;background:var(--paper2);border-radius:999px;padding:3px 12px;font-size:13.5px}
+.mini.say::before{content:"🔊 "}
+.gist{display:none;margin-top:6px;font-size:15px;color:var(--ink2);background:var(--paper2);border-radius:10px;padding:6px 12px}
+.gist.show{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}}
+.gl{border:0;background:none;padding:0;border-bottom:2px dotted var(--gold);font-size:inherit;line-height:inherit;font-weight:700;color:var(--ink)}
+.tr{color:var(--ribbon);font-weight:900;text-decoration:underline wavy var(--ribbon2);text-underline-offset:4px}
+.nc{background:var(--lilacL);border-radius:4px;padding:1px 3px;box-shadow:inset 0 -2px 0 var(--lilac)}
+.nc::before{content:"[";color:var(--lilac);font-weight:900}.nc::after{content:"]";color:var(--lilac);font-weight:900}
+.pop{position:fixed;z-index:50;background:var(--paper);border:2px solid var(--gold);border-radius:12px;padding:8px 12px;box-shadow:var(--shadow);font-size:15px;max-width:260px;display:none}
+.pop.show{display:block;animation:fade .2s}
+.pop b{display:block;font-size:17px}
+
+/* vocab cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{padding:14px 16px;text-align:left;border-radius:5px;min-height:130px;cursor:pointer}
+.card .w{font-size:24px;font-weight:900;color:var(--ribbon);line-height:1.2}
+.card .kk{color:var(--ink2);font-size:15px}
+.card .pos{display:inline-block;background:var(--goldL);border-radius:6px;padding:0 7px;font-size:13px;margin-left:4px}
+.card .tap{position:absolute;right:12px;bottom:8px;font-size:12.5px;color:var(--ink2)}
+.card .back{display:none}
+.card.open .back{display:block}
+.card.open .tap{display:none}
+.card .zh{font-size:17px;font-weight:700;margin-top:8px}
+.card .def{font-size:14.5px;color:var(--ink2);font-style:italic;margin:2px 0 8px}
+.ex{font-size:15.5px;margin:6px 0 2px}
+.ex mark{background:var(--hl);color:inherit;padding:0 2px;border-radius:3px}
+.exzh{font-size:14px;color:var(--ink2)}
+.fam{margin-top:8px;font-size:13.5px;background:var(--paper2);border-radius:8px;padding:4px 10px}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.refs{display:flex;flex-wrap:wrap;gap:8px}
+.ref{border:1.5px solid var(--gold);background:var(--paper);border-radius:999px;padding:4px 12px;font-size:14.5px}
+.ref::before{content:"🔊 ";font-size:12px}
+.prog{font-size:14px;color:var(--ink2);margin:0 0 10px}
+
+/* phrases */
+.phr{padding:14px 16px;margin-bottom:14px}
+.phr h3{margin:0;font-size:20px;color:var(--ribbon)}
+.phr .pz{font-weight:700}
+.phr .pn{font-size:14.5px;color:var(--ink2);margin:4px 0}
+.pat{background:var(--paper2);border-radius:12px;padding:10px 14px;font-size:15.5px;margin:8px 0}
+.exl{display:flex;gap:8px;align-items:flex-start;margin:8px 0}
+.exl .mini{flex:none;margin-top:3px}
+
+/* quiz */
+.qset{margin-bottom:26px}
+.qset-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.qset-h h3{margin:0;font-size:19px}
+.mode{display:inline-flex;background:var(--paper2);border-radius:999px;padding:4px;gap:4px;margin:4px 0 8px}
+.mode button{border:0;background:transparent;border-radius:999px;padding:6px 14px;font-size:14.5px}
+.mode button[aria-pressed="true"]{background:var(--ribbon);color:var(--onR)}
+.q{padding:14px 16px 12px;margin:12px 0;border-radius:5px}
+.qt{margin:0 0 10px;font-size:17px;font-weight:500}
+.qn{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ribbon);color:var(--onR);font-size:13.5px;margin-right:8px;vertical-align:2px}
+.blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--ink2);text-align:center}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--bg2);background:var(--paper);border-radius:12px;padding:9px 14px;font-size:16px;display:flex;gap:10px;align-items:flex-start;transition:transform .12s}
+.opt:active{transform:scale(.98)}
+.opt .lt{font-weight:900;color:var(--gold);flex:none}
+.opt.pick{border-color:var(--lilac);background:var(--lilacL)}
+.opt.ok{border-color:var(--ok);background:var(--okL)}
+.opt.ok .lt{color:var(--ok)}
+.opt.no{border-color:var(--bad);background:var(--badL)}
+.opt.ok::after{content:"✓";margin-left:auto;color:var(--ok);font-weight:900}
+.opt.no::after{content:"✗";margin-left:auto;color:var(--bad);font-weight:900}
+.exp{display:none;margin-top:10px;font-size:15px;background:var(--paper2);border-radius:10px;padding:8px 12px}
+.exp.show{display:block;animation:fade .3s}
+.big{border:0;background:var(--ribbon);color:var(--onR);border-radius:14px;padding:10px 22px;font-size:16px;font-weight:700;box-shadow:0 4px 0 color-mix(in srgb,var(--ribbon) 60%,#000)}
+.big:active{transform:translateY(3px);box-shadow:none}
+.big.ghost{background:var(--paper2);color:var(--ink);box-shadow:none}
+.score{display:none;text-align:center;padding:18px;margin:12px 0}
+.score.show{display:block;animation:stamp .6s}
+.score .n{font-family:var(--hand);font-size:54px;color:var(--ribbon);line-height:1.1}
+.listen{border:0;background:var(--goldL);border-radius:14px;padding:8px 16px;font-size:16px;margin:0 0 10px}
+
+.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+
+/* games */
+.game{padding:16px;margin:12px 0 22px}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .col{display:grid;gap:8px;align-content:start}
+.mt{border:2px solid var(--bg2);background:var(--paper);border-radius:12px;padding:10px;font-size:16px;min-height:48px}
+.mt.en{font-weight:700;color:var(--ribbon)}
+.mt.sel{border-color:var(--lilac);background:var(--lilacL);transform:scale(1.03)}
+.mt.done{border-color:var(--ok);background:var(--okL);opacity:.45;pointer-events:none}
+.ord-src{display:grid;gap:8px}
+.ord-item{text-align:left;border:2px solid var(--bg2);background:var(--paper);border-radius:12px;padding:10px 14px;font-size:15.5px}
+.ord-dst{display:grid;gap:8px;margin-top:12px}
+.ord-dst:empty::before{content:"依序點選，正確的會排到這裡 ✦";color:var(--ink2);font-size:14px;padding:12px;border:2px dashed var(--bg2);border-radius:12px;text-align:center}
+.placed{display:flex;gap:10px;align-items:flex-start;background:var(--okL);border-radius:12px;padding:10px 14px;font-size:15.5px;animation:fade .3s}
+.placed .num{flex:none;font-weight:900;color:var(--ok)}
+.placed .yr{margin-left:auto;flex:none;font-weight:700;color:var(--ribbon);font-size:14px}
+.cloze-text{font-size:17px;line-height:2.3}
+.bl{border:0;border-bottom:2.5px solid var(--gold);background:var(--paper2);border-radius:6px 6px 0 0;min-width:96px;padding:0 8px;font-size:16px;margin:0 2px}
+.bl.sel{background:var(--lilacL);border-color:var(--lilac);animation:pop .3s}
+.bl.ok{background:var(--okL);border-color:var(--ok);font-weight:700}
+.bl.no{background:var(--badL);border-color:var(--bad)}
+.bank{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:12px;border-radius:12px;background:var(--paper2)}
+.chip{border:2px solid var(--gold);background:var(--paper);border-radius:999px;padding:4px 14px;font-size:15.5px;font-weight:700}
+.chip.used{opacity:.3;pointer-events:none}
+
+/* fx */
+.fx{position:fixed;pointer-events:none;z-index:80;font-size:18px;left:0;top:0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);z-index:90;display:flex;gap:12px;align-items:center;padding:12px 18px;max-width:92vw;transition:transform .45s cubic-bezier(.3,1.5,.5,1)}
+.toast.show{transform:translate(-50%,0)}
+.toast .ti{font-size:34px}
+.toast b{display:block;color:var(--ribbon)}
+.toast small{color:var(--ink2)}
+@media (max-width:560px){
+  body{font-size:16px}.wrap{padding:12px 10px 70px}
+  .hero{padding:18px 16px}.hero .bow{width:60px;right:10px}
+  .panel{padding:10px 14px 20px}.para p{font-size:17px}
+  .match{gap:6px}.mt{font-size:15px;padding:8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="board inner hero" id="hero">
+    <div class="water" aria-hidden="true">Rourou's Word Magic Notebook ✿ Rourou's Word Magic Notebook ✿ Rourou's Word Magic Notebook</div>
+    <svg class="bow" viewBox="0 0 100 70" aria-hidden="true"><path d="M50 32 C30 5,5 8,8 30 C10 48,32 44,50 36Z" fill="#8E2238"/><path d="M50 32 C70 5,95 8,92 30 C90 48,68 44,50 36Z" fill="#8E2238"/><path d="M46 36 L30 66 L40 62 L46 68 L52 38Z" fill="#7A1C2F"/><path d="M54 36 L70 66 L60 62 L54 68 L48 38Z" fill="#7A1C2F"/><ellipse cx="50" cy="34" rx="8" ry="9" fill="#A82E45"/><path d="M20 22 C28 18,38 22,44 30" stroke="#C54A60" stroke-width="3" fill="none"/><path d="M80 22 C72 18,62 22,56 30" stroke="#C54A60" stroke-width="3" fill="none"/></svg>
+    <h1>柔柔的英文魔法帖</h1>
+    <p class="sub">Unit 13 麻醉的故事 ＆ Unit 14 主題式寫作｜點一點就能學，答對會收集貼紙</p>
+    <div class="stats">
+      <div class="lv"><b id="lvl">Lv.1</b><div class="bar"><i id="xpbar"></i></div><small id="xptxt">0 / 100 XP</small></div>
+      <span class="pill combo" id="combo">連擊 <b>0</b></span>
+      <div class="tools">
+        <button class="ic" id="rateBtn" title="發音速度">🐢 慢速</button>
+        <button class="ic" id="sndBtn" title="音效">🔔 音效開</button>
+        <button class="ic" id="themeBtn" title="切換深淺色">🌙</button>
+      </div>
+    </div>
+    <div class="stickers" id="stickers"></div>
+  </header>
+
+  <nav class="units" id="units" role="tablist"></nav>
+  <main class="board" id="unitBox"></main>
+</div>
+<div class="pop" id="pop"></div>
+<div class="board toast" id="toast"><span class="ti"></span><span><b></b><small></small></span></div>
+
+<script>
+/* ============ DATA ============ */
+const UNITS = [
+{
+ id:"u13", tab:"Unit 13 醫學發展", title:"Anesthesia: The Discovery That Transformed Medicine", zh:"麻醉：改寫醫學史的重大發現",
+ note:`<h4>老師導讀</h4>全文用「<b>前 vs. 後</b>」對比來寫：先講麻醉發明前手術有多可怕（第 2、3 段），再講 1846 年乙醚登場（第 4 段）、氯仿與劑量問題（第 5 段），最後回到今天（第 6 段）。讀的時候抓紅色波浪線的<b>轉折詞</b>（But / however / While / but），就知道作者在哪裡「轉彎」。紫色框是<b>名詞子句</b>，當動詞的受詞。`,
+ paras:[
+  {t:`There are countless reasons to [be grateful for|對…心懷感激] living in the modern world. Technologies from phones and planes to fridges and [blenders|果汁機] make our lives much more comfortable and [luxurious|奢華的] than those of our ancestors. <<But>> perhaps no [innovations|創新] have [spared people from|使人免於] more [misery|悲慘痛苦] than [anesthetics|麻醉劑], the medicines that [put us to sleep|使人入睡（麻醉）] and stop us from feeling pain during [surgeries|手術].`, s:"現代科技讓生活舒適，但最大的恩賜可能是麻醉劑。注意 no … more … than 句型＝最高級。"},
+  {t:`<<Before>> anesthesia was invented, [surgery|外科手術] was one of the most [terrifying|令人恐懼的] experiences a person could face. Patients remained fully awake as doctors cut into their bodies, [physically|身體上地] [held down|壓制住] by four or more strong men. A patient's screams were simply part of the [procedure|手術程序]. Surgeons focused on speed to make the suffering as brief as possible—the Scottish [surgeon|外科醫師] Robert Liston could [amputate|截肢] a leg in 25 seconds—<<but>> the [agony|極度痛苦] was still [appalling|駭人的].`, s:"麻醉發明前，病人清醒著被壓住開刀；醫生只能拚速度，但痛苦仍然可怕。"},
+  {t:`Other methods for reducing pain included giving the patient alcohol, [opium|鴉片], or [nitrous oxide|笑氣], substances that people otherwise used for pleasure. Sometimes, surgeons even tried to [hypnotize|催眠] patients or [knock them unconscious|把他們打到失去知覺] with [a blow to the head|猛擊頭部]. None of these methods, <<however>>, were particularly effective.`, s:"酒精、鴉片、笑氣、催眠，甚至把人打昏——都不太有效。"},
+  {t:`This all changed in 1846, when an American dentist named William Morton demonstrated the use of [ether|乙醚] as an [anesthetic|麻醉劑]. When [inhaled|吸入], ether made Morton's patient unconscious, allowing the dentist to operate. Upon waking up, the patient confirmed {{that he hadn't felt any pain during the procedure}}. It was a [miraculous|奇蹟般的] breakthrough, and within weeks, Liston started using ether in London.`, s:"1846 年莫頓示範乙醚麻醉，病人醒來說完全不痛；幾週內李斯頓也開始在倫敦使用。"},
+  {t:`<<While>> ether clearly had [massive|巨大的] benefits, it wasn't perfect. Breathing it in was very unpleasant, which often caused patients to cough or [vomit|嘔吐], and it could easily [catch fire|著火]. [Chloroform|氯仿] soon started to be used instead, <<but>> finding the right [dosage|劑量] proved to be difficult, as too much could cause a patient's death. The English [physician|醫生] John Snow [experimented with|嘗試；用…做實驗] different [doses|劑量], carefully working out exactly {{how much should be used}}. He was <<so>> confident <<that>> he even gave chloroform to Queen Victoria when she [gave birth|分娩] in 1853.`, s:"乙醚會讓人咳嗽嘔吐又易燃；改用氯仿後劑量難抓，斯諾研究出精確用量，1853 年還為維多利亞女王分娩時使用。"},
+  {t:`Today, anesthesia is an [established|已確立的] part of modern medicine. It allows us to [undergo|接受（手術）] important procedures in a safe and relatively comfortable way. We may [take it for granted|視為理所當然], <<but>> we should always remember {{how lucky we are to have it}}.`, s:"麻醉現在是醫學的常規，別把它視為理所當然。"}
+ ],
+ vocab:[
+  ["luxurious","lʌgˋʒʊrɪəs","adj.","奢華的、豪華的；舒適享受的","very comfortable and expensive","That hotel offers luxurious rooms with comfortable beds and beautiful ocean views.","那家飯店提供附舒適床鋪和美麗海景的豪華客房。","luxury n. 奢華"],
+  ["innovation","ˌɪnəˋveʃən","n.","新發明、新方法；創新","a new idea, method, or invention","Refrigerators were a major innovation that changed how people store food.","冰箱是改變人們保存食物方式的重大創新。","innovate v. 創新／innovative adj. 創新的"],
+  ["surgery","ˋsɝdʒərɪ","n.","外科手術","medical treatment in which a doctor cuts open the body to repair or remove something","Paige felt nervous about the surgery, but the nurses helped her stay calm.","佩吉對手術感到緊張，但護理師們幫助她保持冷靜。","surgeon n. 外科醫師（第 12 行）"],
+  ["terrifying","ˋtɛrəˌfaɪɪŋ","adj.","令人十分害怕的、駭人的","extremely frightening","Walking alone through a dark forest was a terrifying experience for Blake.","獨自走過黑暗的森林，對布萊克來說是很可怕的經驗。","terrify v.／terrified adj.（人感到害怕）"],
+  ["physically","ˋfɪzɪklɪ","adv.","身體上、肉體上；物理上","in a way that involves the body","The protesters were physically removed from the building by the security guards.","抗議者被保全人員強行架離大樓。","physical adj. 身體的"],
+  ["procedure","prəˋsidʒɚ","n.","醫療處置、手術；程序","a medical operation, or the correct way of doing something","The doctor said the procedure would help repair the damaged tissue.","醫生說這項手術有助於修復受損的組織。","proceed v. 進行"],
+  ["agony","ˋægənɪ","n.","（身心）極度痛苦","very great pain of body or mind","Preston cried out in agony when he broke his arm in the accident.","普雷斯頓在意外中摔斷手臂，痛得大叫。","misery n. 悲慘（第 5 行）／suffering n. 痛苦（第 13 行）"],
+  ["miraculous","məˋrækjələs","adj.","不可思議的、奇蹟般的","very surprising and wonderful, like a miracle","After months without rain, the sudden rainfall felt miraculous to the farmers.","好幾個月沒下雨後，這場突來的雨對農夫們來說像奇蹟。","miracle n. 奇蹟"],
+  ["massive","ˋmæsɪv","adj.","巨大的；大規模的；大量的","very large in size, amount, or degree","The powerful earthquake caused massive damage to roads and houses.","強烈地震對道路和房屋造成巨大損害。","mass n. 大量；一大團"],
+  ["vomit","ˋvɑmɪt","v.","嘔吐","to bring food up from your stomach and out through your mouth","Some people vomit when they smell food that has gone bad.","有些人聞到壞掉的食物就會嘔吐。","＝throw up（口語）"],
+  ["physician","fəˋzɪʃən","n.","醫生（尤指內科醫生）","a doctor, especially one who treats illness with medicine","A good physician listens carefully when patients describe their symptoms and concerns.","好醫生會仔細聆聽病人描述症狀與擔憂。","別和 physicist（物理學家）搞混"],
+  ["dose","dos","n.","一次的服用量、劑量","the amount of medicine taken at one time","You should take each dose of the medicine with water after meals.","每一劑藥都應在飯後配水服用。","dosage n. 劑量（規定的劑量標準，較正式，第 39 行）"],
+  ["established","ɪsˋtæblɪʃt","adj.","已確立的、已被接受的；備受尊重的","accepted and used by people for a long time","Telemedicine has become an established method for follow-up visits.","遠距醫療已成為回診的一種公認方式。","establish v. 建立"],
+  ["undergo","ˌʌndɚˋgo","v.","經歷、接受、遭受","to experience something, especially a medical treatment or a change","Mrs. Heath underwent several tests before her doctor decided on the best treatment.","在醫生決定最佳療法前，希思太太接受了好幾項檢查。","undergo – underwent – undergone","underwent"]
+ ],
+ refs:[["blender","果汁機"],["amputate","截肢"],["appalling","駭人的；糟透的"],["inhale","吸入"],["anesthesia","麻醉"],["anesthetic","麻醉劑；麻醉的"]],
+ phrases:[
+  {p:"be grateful for N./V-ing", zh:"對……心懷感激", n:"grateful＝thankful。be grateful (to sb) for sth／be grateful to V／be grateful (that) S+V。",
+   ex:[["Darrell was grateful for the help he received during that difficult time.","戴瑞爾對他在那段艱難時期所獲得的幫助心存感激。"],["Sharon is grateful to the nurse for taking care of her grandfather.","雪倫感謝護理師照顧她爺爺。"]]},
+  {p:"spare sb/sth from + N./V-ing", zh:"使某人／某物免於遭受……", n:"常用被動：sb/sth be spared from sth。",
+   ex:[["Jane wanted to spare her daughter from the stress she had endured.","珍想讓女兒免於她承受過的壓力。"]]},
+  {p:"experiment with sth", zh:"嘗試……；用……做實驗", n:"experiment with sth 嘗試／用……做實驗；experiment on sb/sth 對……進行實驗。",
+   ex:[["Claude often experiments with different colors in his paintings.","克勞德常在畫中嘗試運用不同的色彩。"],["Scientists often experiment on animals like mice and fruit flies.","科學家經常在老鼠和果蠅等動物身上做實驗。"]]},
+  {p:"give birth (to N.)", zh:"分娩；產下（孩子）；催生", n:"也可引申為「產生、催生（抽象概念）」。",
+   ex:[["She gave birth to a healthy baby boy early this morning.","她今天一早生下一名健康的男嬰。"],["The discovery gave birth to a new field of scientific research.","這項發現催生了一個全新的科學研究領域。"]]},
+  {p:"take sb/sth for granted", zh:"將……視為理所當然", n:"受詞是子句時用虛受詞 it：take it for granted that S+V。",
+   ex:[["Mr. Powell took his good health for granted until he became seriously ill.","鮑威爾先生在重病前一直將健康視為理所當然。"],["Many people take it for granted that clean water will always be available.","許多人理所當然地認為乾淨的水永遠唾手可得。"]]}
+ ],
+ pattern:{p:"No (other) N.／Nothing／No one ＋ be／V ＋ 比較級 than／as 原級 as", zh:"沒有……比……更……的了（用否定主詞表達最高級）",
+   src:"But perhaps no innovations have spared people from more misery than anesthetics, …",
+   ex:[["No one else is nicer than Abigail, and I am so glad that she's my friend.","沒有人比艾比蓋兒更好心了；我很慶幸她是我的朋友。"],["No other kid in this kindergarten is as naughty as Ted.","這所幼稚園裡沒有小孩比泰德更頑皮了。"],["Nothing is more relaxing than watching a movie after finishing final exams.","沒有比期末考後看部電影更讓人放鬆的事了。"]]},
+ extras:[],
+ order:{kind:"timeline", title:"時間軸：依發生先後點選", hint:"課本混合題第 2 題。點出最早發生的事件，再依序點下去。",
+   items:[["Robert Liston made a point of completing surgeries as quickly as possible.","麻醉前"],["William Morton demonstrated the use of ether as an anesthetic.","1846"],["John Snow developed safer methods for administering chloroform.","1846 後"],["Queen Victoria received chloroform during childbirth.","1853"]]},
+ cloze:{title:"文意選填：麻醉小故事",
+   text:"Long ago, {0} was one of the most {1} experiences anyone could face. Patients cried out in {2} while doctors worked as fast as they could. In 1846, ether brought a {3} change, though it often made patients cough or {4}. Later, a careful {5} named John Snow tested different {6} of chloroform. Today, anesthesia is an {7} part of medicine, so we can {8} operations safely.",
+   ans:["surgery","terrifying","agony","miraculous","vomit","physician","doses","established","undergo"], extra:["luxurious","massive"]},
+ quizzes:[
+  {id:"u13r", name:"課文理解", qs:[
+   {q:"What does the example of Robert Liston in day one most clearly illustrate?", o:["Before anesthesia, surgical skill was often measured by speed.","Surgeons in the 1800s could perform a wide variety of complex operations.","Most surgeries were successful in the 1800s.","Amputations were the most common medical procedure before anesthesia became available."], a:0, e:"第 13–15 行：醫生拚速度讓痛苦盡量短，李斯頓 25 秒就能截肢——說明當時外科技術是用「速度」衡量。"},
+   {q:"Choose the timeline that shows the correct order.<br><small>① John Snow developed safer methods for administering chloroform.<br>② Robert Liston made a point of completing surgeries as quickly as possible.<br>③ William Morton demonstrated the use of ether as an anesthetic.<br>④ Queen Victoria received chloroform during childbirth.</small>", o:["③ → ② → ④ → ①","② → ③ → ① → ④","① → ③ → ② → ④","④ → ① → ② → ③"], a:1, e:"李斯頓拚速度（麻醉前）→ 1846 莫頓示範乙醚 → 斯諾研究氯仿劑量 → 1853 女王分娩時使用。"},
+   {q:"Which of the following was NOT a problem with ether?", o:["It often made patients cough.","It could easily catch fire.","It sometimes caused patients to vomit.","It was too expensive for most hospitals."], a:3, e:"第 34–37 行提到咳嗽、嘔吐、易燃，沒有提到價格。"},
+   {q:"Why was John Snow confident enough to give chloroform to Queen Victoria?", o:["He had worked out exactly how much should be used.","Ether had been banned in England.","The queen had used chloroform many times before.","Chloroform never caused any side effects."], a:0, e:"第 41–43 行：他實驗不同劑量，精確算出該用多少（how much should be used 是名詞子句）。"},
+   {q:"What is the main message of the last paragraph?", o:["We should appreciate anesthesia instead of taking it for granted.","Anesthesia is still too dangerous to use.","Modern surgery no longer needs anesthesia.","Patients should choose their own dosage."], a:0, e:"We may take it for granted, but we should always remember how lucky we are to have it."}
+  ]},
+  {id:"u13p", name:"片語句型＆翻譯", qs:[
+   {q:"Sharon is grateful ____ the nurse ____ taking care of her grandfather.", o:["to ／ for","for ／ to","with ／ of","at ／ about"], a:0, e:"be grateful to sb for sth：感謝某人做某事。"},
+   {q:"The new rule will spare workers ____ working extra hours on weekends.", o:["from","of","with","to"], a:0, e:"spare sb from + V-ing：使某人免於……"},
+   {q:"Scientists often experiment ____ animals like mice and fruit flies.", o:["on","with","at","for"], a:0, e:"experiment on sb/sth：對……進行實驗；experiment with sth：嘗試……"},
+   {q:"The discovery gave ____ to a new field of scientific research.", o:["birth","born","bear","birthday"], a:0, e:"give birth to N.：產下；引申為催生。"},
+   {q:"Many people take ____ for granted that clean water will always be available.", o:["it","this","that","them"], a:0, e:"受詞是 that 子句時，用虛受詞 it：take it for granted that S+V。"},
+   {q:"No other kid in this kindergarten is as naughty ____ Ted.", o:["as","than","like","so"], a:0, e:"No other N. + be + as 原級 as ＝ 最高級。"},
+   {q:"翻譯：不要將朋友視為理所當然；好的友誼需要用心與珍惜。", o:["Don't take your friends for granted; good friendships require effort and appreciation.","Don't take granted your friends; good friendships require effort and appreciation.","Don't take your friends as granted; good friendships require effort and appreciation.","Don't take for granted to your friends; good friendships require effort and appreciation."], a:0, e:"take sb/sth for granted，受詞放在 take 後面。"},
+   {q:"翻譯：沒有比一夜好眠更讓人滿足的事了。", o:["Nothing is more satisfying than a good night's sleep.","Nothing is satisfying than a good night's sleep.","Nothing is more satisfied than a good night's sleep.","Something is more satisfying than a good night's sleep."], a:0, e:"Nothing + be + 比較級 + than；「令人滿足的」用 satisfying（事物），satisfied 是人感到滿足。"}
+  ]}
+ ]
+},
+{
+ id:"u14", tab:"Unit 14 主題式寫作", title:"The More, the Merrier—or Not?", zh:"人多好，還是一個人更好？",
+ note:`<h4>老師導讀</h4>這是「比較兩種方式＋表達偏好」的兩段式作文。<b>第一段</b>：首句帶出兩種選擇 → 獨旅優點 → <span class="tr">In contrast</span> 轉到結伴旅行 → <span class="tr">In addition</span> 加碼優點 → <span class="tr">However</span> 帶出缺點 → Both… 總結。<b>第二段</b>：<span class="tr">Personally</span> 表態 → 理由（Instead of… / also）→ <span class="tr">Although</span> 讓步收尾。學會這個骨架，就能套用到「個人報告 vs. 分組報告」。`,
+ paras:[
+  {t:`When traveling, people often choose between taking a trip alone and going with friends or family members. [Solo|單人的] travel offers greater freedom and [flexibility|彈性]. With no need to [compromise|妥協] with others, solo travelers can adjust their plans [on the spur of the moment|一時興起] and fully enjoy [destinations|目的地] at their own pace. <<In contrast>>, traveling in a group allows people to share experiences, [split|分攤] expenses, and create lasting memories together. <<In addition>>, [companions|同伴] can support one another when unexpected problems [occur|發生], which makes the journey feel safer and less [stressful|有壓力的]. <<However>>, group trips aren't always [smooth sailing|一帆風順]. <<Since>> everyone may have different interests, budgets, and schedules, disagreements can sometimes [arise|發生]. Both travel styles have their own strengths and appeal to different kinds of travelers.`, s:"第一段：比較獨自旅行（自由、彈性）與結伴旅行（分享、分攤、互相支援；但可能有爭執），最後總結兩者各有優點。"},
+  {t:`<<Personally>>, I prefer traveling alone because I value independence and flexibility. <<Instead of>> adjusting to other people's desires or following a schedule that may not suit me, I get to have full control over my journey. I can stay longer at places that capture my interest, [venture off the beaten path|探索人跡罕至之處], or simply [go with the flow|順其自然] without worrying about conflicting opinions. Traveling alone <<also>> pushes me out of my [comfort zone|舒適圈] and teaches me to [think on my feet|隨機應變] when challenges [come up|出現]. <<Although>> solo travel can [occasionally|偶爾] feel lonely, the sense of freedom and personal growth it brings [is second to none|無人能及].`, s:"第二段：作者偏好獨旅——能完全掌控行程、走出舒適圈、學會隨機應變；雖然偶爾寂寞，但自由與成長無可取代。"}
+ ],
+ vocab:[
+  ["solo","ˋsolo","adj.","單人的；獨自進行的；獨唱的、獨奏的","done alone, without other people","Lindsey felt nervous before her first solo performance in front of an audience.","琳賽在觀眾面前第一次獨奏前感到很緊張。","≒ independent／single"],
+  ["flexibility","ˌflɛksəˋbɪlətɪ","n.","靈活性、彈性","the ability to change easily to suit new situations","Having flexibility in your schedule makes it easier to deal with unexpected changes.","行程保有彈性，能讓你更容易應付突發變化。","flexible adj. 有彈性的"],
+  ["compromise","ˋkɑmprəˌmaɪz","v.","妥協、折衷、讓步","to accept less than you want so that you can reach an agreement","Eli had to compromise with his brother about which movie to watch.","伊萊得和哥哥妥協，決定要看哪部電影。","用法：compromise with sb 和某人妥協"],
+  ["destination","ˌdɛstəˋneʃən","n.","目的地；終點","the place that someone or something is going to","Our luggage arrived at our destination two hours after our flight landed.","班機降落兩小時後，我們的行李才抵達目的地。","destined adj. 注定的"],
+  ["split","splɪt","v.","分攤、分享；分開；分裂","to divide something into parts and share it","We decided to split the pizza because everyone wanted only one slice.","因為每個人只想吃一片，我們決定分著吃那個披薩。","split – split – split"],
+  ["arise","əˋraɪz","v.","發生、出現；產生（較正式，常指抽象問題）","(formal) if a problem or situation arises, it begins to happen","A serious problem arose when the computer system stopped working suddenly.","電腦系統突然停擺時，發生了嚴重的問題。","arise – arose – arisen；≒ come up（較口語）≒ happen ≒ occur","arose"],
+  ["occasionally","əˋkeʒənəlɪ","adv.","偶爾、有時","sometimes, but not often","Although Alexis usually eats at home, she occasionally has dinner with friends.","雖然艾莉克西絲通常在家吃飯，她偶爾會和朋友吃晚餐。","≒ sometimes；occasional adj."]
+ ],
+ refs:[["stressful","充滿壓力的、令人緊張的"],["companion","同伴"],["independent","獨立的"]],
+ phrases:[
+  {p:"on the spur of the moment", zh:"一時興起、臨時起意", n:"spur 原指騎馬用的「馬刺」，引申為「衝動、刺激」：未經計畫、一時衝動而立即做決定。",
+   ex:[["They decided on the spur of the moment to take a day trip to the coast.","他們臨時起意，決定到海邊一日遊。"]]},
+  {p:"think on one's feet", zh:"隨機應變；反應敏捷", n:"在壓力或突發情況下迅速反應、當機立斷。",
+   ex:[["We were forced to think on our feet after the original plan fell apart.","原本的計畫失敗後，我們被迫臨機應變。"]]},
+  {p:"be second to none", zh:"無人能及、首屈一指", n:"常用 sb/sth be second to none。",
+   ex:[["Professor Sun's knowledge of local history is second to none.","孫教授對當地歷史的了解無人能及。"]]}
+ ],
+ pattern:null,
+ extras:[
+  ["smooth sailing","一帆風順、進展順利","常以否定 not always smooth sailing 出現：並非總是一帆風順。","However, group trips aren't always smooth sailing."],
+  ["venture off the beaten path","探索人跡罕至之處；嘗試非主流的選擇","字面是「冒險離開人們常走的路」。","I like to venture off the beaten path when I travel."],
+  ["go with the flow","順其自然、隨遇而安","不硬性規劃，跟著情況走。","On vacation, I just go with the flow."],
+  ["comfort zone","舒適圈","讓人感到安全熟悉的環境或狀態。","Traveling alone pushes me out of my comfort zone."]
+ ],
+ order:{kind:"sentences", title:"句子排序：還原第二段", hint:"把範文第二段的五個句子依正確順序點出來，注意開頭的 Personally 和收尾的 Although。",
+   items:[["Personally, I prefer traveling alone because I value independence and flexibility.",""],["Instead of adjusting to other people's desires or following a schedule that may not suit me, I get to have full control over my journey.",""],["I can stay longer at places that capture my interest, venture off the beaten path, or simply go with the flow without worrying about conflicting opinions.",""],["Traveling alone also pushes me out of my comfort zone and teaches me to think on my feet when challenges come up.",""],["Although solo travel can occasionally feel lonely, the sense of freedom and personal growth it brings is second to none.",""]]},
+ cloze:{title:"文意選填：旅行方式大比較",
+   text:"A {0} trip offers greater freedom and {1}. With no need to {2} with others, you can fully enjoy your {3} at your own pace. Traveling with friends, on the other hand, lets you {4} expenses. However, since everyone has different plans, disagreements can sometimes {5}. Solo travel can {6} feel lonely, and being alone in a strange city can be {7}.",
+   ans:["solo","flexibility","compromise","destinations","split","arise","occasionally","stressful"], extra:["massive","established"]},
+ quizzes:[
+  {id:"u14r", name:"範文理解", qs:[
+   {q:"According to the essay, which is an advantage of traveling in a group?", o:["Travelers can split expenses and support one another.","Travelers never have to compromise.","Travelers can always change plans on the spur of the moment.","Travelers will never feel stressed."], a:0, e:"In contrast, traveling in a group allows people to … split expenses … companions can support one another."},
+   {q:"Why aren't group trips always smooth sailing?", o:["People may have different interests, budgets, and schedules.","Group trips are always more expensive.","Companions rarely help each other.","Destinations are usually too crowded."], a:0, e:"Since everyone may have different interests, budgets, and schedules, disagreements can sometimes arise."},
+   {q:"Why does the writer prefer traveling alone?", o:["Because the writer values independence and flexibility.","Because the writer dislikes meeting new people.","Because solo travel is cheaper.","Because the writer never feels lonely."], a:0, e:"Personally, I prefer traveling alone because I value independence and flexibility."},
+   {q:"In the essay, “think on my feet” means to ____.", o:["react quickly when problems come up","walk a long way every day","follow a fixed schedule","stand still and wait"], a:0, e:"think on one's feet：在突發情況下迅速反應、隨機應變。"},
+   {q:"Which word could replace “arise” in “disagreements can sometimes arise”?", o:["come up","calm down","give up","split up"], a:0, e:"arise ≒ come up ≒ happen ≒ occur。"}
+  ]},
+  {id:"u14p", name:"片語選擇", qs:[
+   {q:"We had no plans at all—we went to the beach ____.", o:["on the spur of the moment","second to none","in our comfort zone","off the beaten path"], a:0, e:"on the spur of the moment：一時興起。"},
+   {q:"When the bus broke down, our guide had to ____ and find another way.", o:["think on her feet","go with the flow","be second to none","split the bill"], a:0, e:"突發狀況下迅速想辦法＝think on one's feet。"},
+   {q:"This bakery's bread is ____; everyone in town loves it.", o:["second to none","smooth sailing","on the spur of the moment","out of the comfort zone"], a:0, e:"be second to none：無人能及、首屈一指。"},
+   {q:"Don't plan every minute of the trip—just ____.", o:["go with the flow","think on your feet","compromise with you","be second to none"], a:0, e:"go with the flow：順其自然。"},
+   {q:"Giving a speech in English pushed me out of my ____.", o:["comfort zone","destination","flexibility","beaten path"], a:0, e:"push sb out of one's comfort zone：逼某人走出舒適圈。"},
+   {q:"We wanted to ____ and visit villages that tourists rarely see.", o:["venture off the beaten path","take it for granted","give birth to","go with the flow"], a:0, e:"venture off the beaten path：探索人跡罕至之處。"},
+   {q:"Moving to a new school wasn't always ____, but I learned a lot.", o:["smooth sailing","second to none","on the spur of the moment","comfort zone"], a:0, e:"not always smooth sailing：並非總是一帆風順。"},
+   {q:"Eli had to compromise ____ his brother about which movie to watch.", o:["with","to","for","on"], a:0, e:"compromise with sb：和某人妥協。"}
+  ]},
+  {id:"u14w", name:"寫作轉換：個人報告 vs. 分組報告", intro:"Part III 題目：第一段說明個人報告與分組報告各自的特色；第二段說明你較喜歡哪一種，並解釋原因。用範文的骨架，選出最適合的句子。", qs:[
+   {q:"第一段開頭，帶出兩種選擇的最佳句子是？", o:["When preparing for presentations, students are sometimes asked to work alone and sometimes in groups.","I like presentations very much.","Group presentations are second to none.","In conclusion, presentations are important."], a:0, e:"仿照 When traveling, people often choose between…：先點出兩種方式。"},
+   {q:"把 “Solo travel offers greater freedom and flexibility.” 改寫成報告主題：", o:["Individual presentations offer greater freedom and flexibility.","Individual presentations offers greater freedom and flexibility.","Individual presentation offer greater free and flexible.","Individually presentations offer greater freedom and flexibility."], a:0, e:"主詞複數 presentations 配 offer；freedom 和 flexibility 都是名詞，詞性要對稱。"},
+   {q:"轉到分組報告的優點，哪一句最好？", o:["In contrast, group presentations allow students to share ideas, split the work, and learn from one another.","Therefore, group presentations are terrible.","For example, I did a presentation last year.","Because group presentations allow students to share ideas."], a:0, e:"In contrast 表對比轉向另一方；split the work 套用本課單字。最後一個選項是只有從屬子句的不完整句。"},
+   {q:"帶出分組報告可能的缺點：", o:["However, group work isn't always smooth sailing, since disagreements can arise.","However, group work is always smooth sailing.","In addition, group work isn't always smooth sailing.","Since group work isn't always smooth sailing."], a:0, e:"However 帶出轉折缺點；In addition 是「附加」不是轉折；最後一個選項不是完整句。"},
+   {q:"第二段的收尾讓步句：", o:["Although group work can occasionally be stressful, the teamwork skills it builds are second to none.","Although group work can occasionally be stressful, but the teamwork skills it builds are second to none.","Group work is occasionally stressful, although.","Although group work, the teamwork skills are second to none."], a:0, e:"Although 和 but 不能同時使用；讓步子句後接主要子句。"}
+  ]}
+ ]
+}
+];
+
+const BADGES = [
+ ["first","🌸","初次魔法","第一次答對"],
+ ["c5","🎀","五連擊","連續答對 5 題"],
+ ["c10","👑","十連擊","連續答對 10 題"],
+ ["ear","🔔","小耳朵","聽了 20 次發音"],
+ ["cards","🃏","翻卡達人","翻開某一課所有單字卡"],
+ ["match","💞","配對成功","完成一次配對遊戲"],
+ ["order","⏳","時光排序","完成時間軸或句子排序"],
+ ["cloze","🧁","填空小魔女","完成一篇文意選填"],
+ ["perfect","⭐","滿分貼紙","考試模式全部答對"]
+];
+
+/* ============ STATE ============ */
+const KEY="rourou-magic-u13-14";
+let S={xp:0,streak:0,badges:[],heard:0,flipped:{},sound:true,slow:false,mode:"review"};
+try{const d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)S=Object.assign(S,d);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a;};
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ============ SOUND ============ */
+let AC=null;
+function tone(f,t,d,type="sine",v=.16,f2){const c=AC,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(f,c.currentTime+t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,c.currentTime+t+d);g.gain.setValueAtTime(0,c.currentTime+t);g.gain.linearRampToValueAtTime(v,c.currentTime+t+.01);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+t+d);o.connect(g).connect(c.destination);o.start(c.currentTime+t);o.stop(c.currentTime+t+d+.05);}
+function sfx(n){if(!S.sound)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==="suspended")AC.resume();}catch(e){return;}
+ if(n==="ok"){[784,1047,1319].forEach((f,i)=>tone(f,i*.07,.22,"sine",.15));tone(2637,.2,.25,"triangle",.04);}
+ else if(n==="bad"){tone(330,0,.14,"triangle",.12);tone(247,.13,.2,"triangle",.12);}
+ else if(n==="tick")tone(1200,0,.05,"sine",.06);
+ else if(n==="flip")tone(500,0,.12,"sine",.08,900);
+ else if(n==="badge"){[523,659,784,1047,1319,1568].forEach((f,i)=>tone(f,i*.08,.3,"triangle",.11));}
+ else if(n==="level"){[392,523,659,784,1047].forEach((f,i)=>tone(f,i*.1,.4,"square",.05));[1319,1568,2093].forEach((f,i)=>tone(f,.5+i*.06,.5,"sine",.1));}
+}
+
+/* ============ SPEECH ============ */
+let VOICE=null;
+function pickVoice(){const vs=speechSynthesis.getVoices();VOICE=vs.find(v=>/en-US/i.test(v.lang)&&/Samantha|Google US|Aria|Jenny|Ava|Allison/i.test(v.name))||vs.find(v=>/en-US/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;}
+if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice;}
+function say(t){if(!("speechSynthesis" in window)){toast("🔇","這個瀏覽器不支援發音","可改按 Longman 開字典聽");return;}
+ speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";if(VOICE)u.voice=VOICE;u.rate=S.slow?.68:.95;speechSynthesis.speak(u);
+ S.heard++;save();if(S.heard>=20)badge("ear");}
+const longman=w=>`https://www.ldoceonline.com/dictionary/${encodeURIComponent(w.toLowerCase().trim().replace(/\s+/g,"-"))}`;
+
+/* ============ FX ============ */
+const COLORS=["#F5A7B7","#F3D88A","#BBA8E2","#FFFFFF","#E07A8E"];
+function burst(el,n=16){if(RM||!el)return;const r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+ for(let i=0;i<n;i++){const s=document.createElement("span");s.className="fx";s.textContent=["✦","❀","♥","✿","★"][i%5];s.style.color=COLORS[i%5];s.style.textShadow="0 0 2px rgba(142,34,56,.4)";document.body.appendChild(s);
+  const a=Math.random()*Math.PI*2,d=50+Math.random()*70;
+  s.animate([{transform:`translate(${x}px,${y}px) scale(.4)`,opacity:1},{transform:`translate(${x+Math.cos(a)*d}px,${y+Math.sin(a)*d}px) scale(1.1) rotate(${Math.random()*360}deg)`,opacity:0}],{duration:700+Math.random()*300,easing:"cubic-bezier(.2,.8,.3,1)"}).onfinish=()=>s.remove();}}
+function petals(n=40){if(RM)return;const W=innerWidth;for(let i=0;i<n;i++){const s=document.createElement("span");s.className="fx";s.textContent=["❀","✿","✦","♥"][i%4];s.style.color=COLORS[i%5];s.style.fontSize=(14+Math.random()*16)+"px";document.body.appendChild(s);
+ const x=Math.random()*W,dx=(Math.random()-.5)*160;s.animate([{transform:`translate(${x}px,-30px) rotate(0)`,opacity:1},{transform:`translate(${x+dx}px,${innerHeight+30}px) rotate(${360+Math.random()*360}deg)`,opacity:.8}],{duration:1800+Math.random()*1500,delay:Math.random()*600,easing:"ease-in"}).onfinish=()=>s.remove();}}
+let tT;function toast(icon,title,sub){const t=$("#toast");t.querySelector(".ti").textContent=icon;t.querySelector("b").textContent=title;t.querySelector("small").textContent=sub||"";t.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>t.classList.remove("show"),2800);}
+function shake(el){el.classList.remove("shake");void el.offsetWidth;el.classList.add("shake");}
+
+/* ============ PROGRESS ============ */
+function drawStats(){const lv=Math.floor(S.xp/100)+1,p=S.xp%100;$("#lvl").textContent="Lv."+lv;$("#xpbar").style.width=p+"%";$("#xptxt").textContent=`${p} / 100 XP`;
+ const c=$("#combo");c.innerHTML=`連擊 <b>${S.streak}</b>${S.streak>=3?" 🔥":""}`;
+ $("#stickers").innerHTML=BADGES.map(b=>`<button class="stk ${S.badges.includes(b[0])?"on":""}" data-b="${b[0]}" title="${b[2]}：${b[3]}" aria-label="${b[2]}">${b[1]}</button>`).join("");}
+function badge(id){if(S.badges.includes(id))return;S.badges.push(id);save();const b=BADGES.find(x=>x[0]===id);drawStats();
+ const el=$(`.stk[data-b="${id}"]`);if(el){el.classList.add("new");burst(el,22);}setTimeout(()=>sfx("badge"),150);toast(b[1],"獲得貼紙："+b[2],b[3]);}
+function gain(n){const before=Math.floor(S.xp/100);S.xp+=n;save();drawStats();if(Math.floor(S.xp/100)>before){setTimeout(()=>{sfx("level");petals(46);toast("🎉",`升級！Lv.${Math.floor(S.xp/100)+1}`,"柔柔的魔力又變強了");},350);}}
+function right(el){S.streak++;sfx("ok");burst(el);gain(10+Math.min(S.streak,5)*2);const c=$("#combo");c.classList.remove("hot");void c.offsetWidth;c.classList.add("hot");
+ badge("first");if(S.streak>=5)badge("c5");if(S.streak>=10)badge("c10");}
+function wrong(el){S.streak=0;save();sfx("bad");shake(el);drawStats();}
+$("#stickers").addEventListener("click",e=>{const b=e.target.closest(".stk");if(!b)return;const d=BADGES.find(x=>x[0]===b.dataset.b);sfx("tick");toast(d[1],d[2]+(S.badges.includes(d[0])?"（已收集）":"（尚未收集）"),d[3]);});
+
+/* ============ PASSAGE ============ */
+function parse(t){return esc(t).replace(/\[([^\]|]+)\|([^\]]+)\]/g,'<button class="gl" data-zh="$2">$1</button>').replace(/&lt;&lt;(.+?)&gt;&gt;/g,'<span class="tr">$1</span>').replace(/\{\{(.+?)\}\}/g,'<span class="nc">$1</span>');}
+const plain=t=>t.replace(/\[([^\]|]+)\|[^\]]+\]/g,"$1").replace(/<<|>>|\{\{|\}\}/g,"");
+function renderPassage(u,box){
+ box.innerHTML=`<div class="note">${u.note}</div>
+ <div class="legend"><span class="tr">轉折詞</span><span class="nc">名詞子句</span><span style="border-bottom:2px dotted var(--gold)"><b>點我看中文</b></span></div>
+ <div class="row" style="margin-bottom:6px"><button class="mini say" data-all>朗讀全文</button></div>
+ ${u.paras.map((p,i)=>`<div class="para"><p>${parse(p.t)}</p><div class="ctl"><button class="mini say" data-p="${i}">第 ${i+1} 段</button><button class="mini" data-g="${i}">💡 段落大意</button></div><div class="gist" id="g-${u.id}-${i}">${esc(p.s)}</div></div>`).join("")}`;
+ box.onclick=e=>{const g=e.target.closest(".gl");if(g){showPop(g);return;}
+  const b=e.target.closest("[data-p]");if(b){say(plain(u.paras[+b.dataset.p].t));return;}
+  if(e.target.closest("[data-all]")){say(u.paras.map(p=>plain(p.t)).join(" "));return;}
+  const gs=e.target.closest("[data-g]");if(gs){sfx("tick");$("#g-"+u.id+"-"+gs.dataset.g).classList.toggle("show");}};
+}
+const pop=$("#pop");
+function showPop(g){const w=g.textContent;pop.innerHTML=`<b>${esc(w)}</b>${esc(g.dataset.zh)}<div class="row"><button class="mini say" id="popSay">發音</button><a class="mini" style="text-decoration:none" href="${longman(w)}" target="_blank" rel="noopener">📖 Longman</a></div>`;
+ pop.classList.add("show");const r=g.getBoundingClientRect();let x=Math.min(r.left,innerWidth-275);pop.style.left=Math.max(8,x)+"px";
+ const top=r.bottom+8+pop.offsetHeight>innerHeight?r.top-pop.offsetHeight-8:r.bottom+8;pop.style.top=top+"px";$("#popSay").onclick=()=>say(w);sfx("tick");say(w);}
+document.addEventListener("click",e=>{if(!e.target.closest(".gl")&&!e.target.closest("#pop"))pop.classList.remove("show");});
+addEventListener("scroll",()=>pop.classList.remove("show"),{passive:true});
+
+/* ============ VOCAB ============ */
+function hlEx(ex,form){return esc(ex).replace(new RegExp("\\b("+form+"\\w*)","i"),"<mark>$1</mark>");}
+function renderVocab(u,box){
+ const f=S.flipped[u.id]||[];
+ box.innerHTML=`<p class="hint">點卡片翻面看中文、英英解釋和例句；🔊 是美式發音，📖 可開 Longman 字典聽真人發音。</p>
+ <p class="prog" id="vp-${u.id}"></p>
+ <div class="grid">${u.vocab.map((v,i)=>`<div class="board card ${f.includes(i)?"":""}" data-i="${i}" role="button" tabindex="0">
+  <div class="w">${v[0]}</div><div class="kk">[${v[1]}]<span class="pos">${v[2]}</span></div>
+  <div class="row"><button class="mini say" data-s="${esc(v[0])}">發音</button><a class="mini" style="text-decoration:none" href="${longman(v[0])}" target="_blank" rel="noopener">📖 Longman</a></div>
+  <div class="back"><div class="zh">${v[3]}</div><div class="def">${esc(v[4])}</div>
+   <div class="ex">${hlEx(v[5],v[8]||v[0])}</div><div class="exzh">${v[6]}</div>
+   <div class="row"><button class="mini say" data-s="${esc(v[5])}">例句</button></div>
+   <div class="fam">🌱 ${v[7]}</div></div>
+  <span class="tap">點我翻面 ✦</span></div>`).join("")}</div>
+ <h3 class="sec-t">參考字彙</h3><div class="refs">${u.refs.map(r=>`<button class="ref" data-s="${esc(r[0])}">${r[0]}　<small>${r[1]}</small></button>`).join("")}</div>`;
+ const prog=()=>{$("#vp-"+u.id).textContent=`已翻開 ${(S.flipped[u.id]||[]).length} / ${u.vocab.length} 張`;};prog();
+ box.onclick=e=>{const s=e.target.closest("[data-s]");if(s){say(s.dataset.s);return;}if(e.target.closest("a"))return;
+  const c=e.target.closest(".card");if(!c)return;flipCard(c,u,prog);};
+ box.onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("card")){e.preventDefault();flipCard(e.target,u,prog);}};
+}
+function flipCard(c,u,prog){const i=+c.dataset.i;sfx("flip");
+ const go=()=>{c.classList.toggle("open");};
+ if(RM)go();else c.animate([{transform:"rotateY(0)"},{transform:"rotateY(90deg)"}],{duration:140}).onfinish=()=>{go();c.animate([{transform:"rotateY(-90deg)"},{transform:"rotateY(0)"}],{duration:160});};
+ const arr=S.flipped[u.id]=S.flipped[u.id]||[];
+ if(!arr.includes(i)){arr.push(i);gain(2);save();prog();if(arr.length===u.vocab.length){burst(c,24);badge("cards");}}}
+
+/* ============ PHRASES ============ */
+function exLine(e){return `<div class="exl"><button class="mini say" data-s="${esc(e[0])}"></button><div><div class="ex">${esc(e[0])}</div><div class="exzh">${e[1]}</div></div></div>`;}
+function renderPhrases(u,box){
+ let h=u.phrases.map(p=>`<div class="board phr"><h3>${esc(p.p)}</h3><div class="pz">${p.zh}</div><div class="pn">${p.n}</div>${p.ex.map(exLine).join("")}</div>`).join("");
+ if(u.pattern){const t=u.pattern;h+=`<h3 class="sec-t">句型</h3><div class="board phr"><h3>${esc(t.p)}</h3><div class="pz">${t.zh}</div><div class="pat">📌 課文第 4 行：${esc(t.src)}</div>${t.ex.map(exLine).join("")}</div>`;}
+ if(u.extras.length){h+=`<h3 class="sec-t">補充說明（慣用語）</h3>`+u.extras.map(x=>`<div class="board phr"><h3>${esc(x[0])}</h3><div class="pz">${x[1]}</div><div class="pn">${x[2]}</div>${exLine([x[3],"範文／例句"])}</div>`).join("");}
+ box.innerHTML=h;box.onclick=e=>{const s=e.target.closest("[data-s]");if(s)say(s.dataset.s);};
+}
+
+/* ============ GAMES ============ */
+const shortZh=z=>z.split(/[；]/)[0];
+function renderGames(u,box){
+ box.innerHTML=`<h3 class="sec-t">單字配對</h3><p class="hint">先點英文，再點相符的中文（反過來也可以）。配對成功會發光消失！</p><div class="board game" id="mg-${u.id}"></div>
+ <h3 class="sec-t">${u.order.title}</h3><p class="hint">${u.order.hint}</p><div class="board game" id="og-${u.id}"></div>
+ <h3 class="sec-t">${u.cloze.title}</h3><p class="hint">點一個空格，再點下方的字填進去。複習模式立刻對答案；考試模式全部填完再交卷。</p><div class="board game" id="cg-${u.id}"></div>`;
+ matchGame(u,$("#mg-"+u.id));orderGame(u,$("#og-"+u.id));clozeGame(u,$("#cg-"+u.id));
+}
+function matchGame(u,box){
+ const pick=shuffle(u.vocab).slice(0,6);let sel=null,done=0;
+ box.innerHTML=`<div class="match"><div class="col">${shuffle(pick).map(v=>`<button class="mt en" data-k="${v[0]}" data-side="en">${v[0]}</button>`).join("")}</div><div class="col">${shuffle(pick).map(v=>`<button class="mt" data-k="${v[0]}" data-side="zh">${shortZh(v[3])}</button>`).join("")}</div></div><div class="row" style="justify-content:center;margin-top:12px"><button class="big ghost" data-re>🔀 換一組</button></div>`;
+ box.onclick=e=>{if(e.target.closest("[data-re]")){matchGame(u,box);sfx("tick");return;}
+  const b=e.target.closest(".mt");if(!b)return;
+  if(b.dataset.side==="en")say(b.dataset.k);
+  if(!sel||sel.dataset.side===b.dataset.side){if(sel)sel.classList.remove("sel");sel=b;b.classList.add("sel");sfx("tick");return;}
+  if(sel.dataset.k===b.dataset.k){[sel,b].forEach(x=>{x.classList.remove("sel");x.classList.add("done");});right(b);done++;sel=null;
+   if(done===pick.length){setTimeout(()=>{petals(30);badge("match");toast("💞","全部配對完成！","按「換一組」再挑戰");},400);}}
+  else{wrong(b);shake(sel);sel.classList.remove("sel");sel=null;}};
+}
+function orderGame(u,box){
+ const items=u.order.items.map((x,i)=>({t:x[0],y:x[1],i}));let next=0;
+ box.innerHTML=`<div class="ord-src">${shuffle(items).map(x=>`<button class="ord-item" data-i="${x.i}">${esc(x.t)}</button>`).join("")}</div><div class="ord-dst"></div><div class="row" style="justify-content:center;margin-top:12px"><button class="big ghost" data-re>↺ 重新排</button></div>`;
+ const dst=box.querySelector(".ord-dst");
+ box.onclick=e=>{if(e.target.closest("[data-re]")){orderGame(u,box);sfx("tick");return;}
+  const b=e.target.closest(".ord-item");if(!b)return;const i=+b.dataset.i;
+  if(i===next){const x=items[i];right(b);b.remove();dst.insertAdjacentHTML("beforeend",`<div class="placed"><span class="num">${next+1}</span><span>${esc(x.t)}</span>${x.y?`<span class="yr">${esc(x.y)}</span>`:""}</div>`);next++;
+   if(next===items.length){setTimeout(()=>{petals(34);badge("order");toast("⏳","排序完成！",u.order.kind==="timeline"?"答案就是 ②→③→①→④":"第二段骨架你記住了");},300);}}
+  else wrong(b);};
+}
+function clozeGame(u,box){
+ const c=u.cloze;let cur=null;const filled={};
+ const bank=shuffle(c.ans.concat(c.extra));
+ box.innerHTML=`<div class="cloze-text">${esc(c.text).replace(/\{(\d+)\}/g,(m,n)=>`<button class="bl" data-n="${n}">（${+n+1}）</button>`)}</div>
+ <div class="bank">${bank.map(w=>`<button class="chip" data-w="${w}">${w}</button>`).join("")}</div>
+ <div class="row" style="justify-content:center;margin-top:12px">${S.mode==="exam"?`<button class="big" data-sub>交卷</button>`:""}<button class="big ghost" data-re>↺ 重做</button><button class="mini say" data-read>朗讀完整短文</button></div><div class="board score"></div>`;
+ const blanks=[...box.querySelectorAll(".bl")];
+ const selectBl=b=>{blanks.forEach(x=>x.classList.remove("sel"));cur=b;if(b)b.classList.add("sel");};
+ selectBl(blanks[0]);
+ const nextEmpty=()=>blanks.find(x=>!x.classList.contains("ok")&&!(S.mode==="exam"&&filled[x.dataset.n]));
+ box.onclick=e=>{
+  if(e.target.closest("[data-re]")){clozeGame(u,box);sfx("tick");return;}
+  if(e.target.closest("[data-read]")){say(c.text.replace(/\{(\d+)\}/g,(m,n)=>c.ans[n]));return;}
+  if(e.target.closest("[data-sub]")){let ok=0;blanks.forEach(b=>{const n=b.dataset.n;b.classList.remove("sel");if(filled[n]===c.ans[n]){b.classList.add("ok");ok++;}else{b.classList.add("no");b.textContent=`${filled[n]||"（空）"} → ${c.ans[n]}`;}});
+   const sc=box.querySelector(".score");sc.innerHTML=`<div class="n">${ok} / ${blanks.length}</div>${ok===blanks.length?"全對！太厲害了 ✦":"紅色的空格看看正確答案"}`;sc.classList.add("show");
+   if(ok===blanks.length){sfx("level");petals(50);badge("cloze");gain(30);}else{sfx(ok/blanks.length>=.7?"ok":"bad");gain(ok*3);}
+   e.target.closest("[data-sub]").remove();return;}
+  const b=e.target.closest(".bl");if(b&&!b.classList.contains("ok")&&!b.classList.contains("no")){selectBl(b);sfx("tick");return;}
+  const ch=e.target.closest(".chip");if(!ch||!cur)return;const w=ch.dataset.w,n=cur.dataset.n;
+  if(S.mode==="exam"){if(filled[n]){const old=box.querySelector(`.chip[data-w="${filled[n]}"]`);if(old)old.classList.remove("used");}
+   filled[n]=w;cur.textContent=w;ch.classList.add("used");sfx("tick");selectBl(nextEmpty()||null);return;}
+  if(w===c.ans[n]){cur.textContent=w;cur.classList.remove("sel");cur.classList.add("ok");ch.classList.add("used");right(cur);selectBl(nextEmpty()||null);
+   if(!nextEmpty()){setTimeout(()=>{petals(40);badge("cloze");toast("🧁","文意選填完成！","按「朗讀完整短文」聽一次");},350);}}
+  else{wrong(cur);shake(ch);}};
+}
+
+/* ============ QUIZZES ============ */
+function vocabQuiz(u){
+ const pool=u.vocab;return shuffle(pool).map((v,k)=>{
+  const others=shuffle(pool.filter(x=>x!==v)).slice(0,3);const type=k%3;
+  if(type===0){const form=v[8]||v[0];return {q:esc(v[5]).replace(new RegExp("\\b"+form+"\\w*","i"),'<span class="blank">＿＿＿</span>'),o:shuffle([form].concat(others.map(x=>x[0]))),ans:form,e:`${form}：${v[3]}｜${v[6]}`};}
+  if(type===1)return {q:`哪一個字的意思是「${shortZh(v[3])}」？`,o:shuffle([v[0]].concat(others.map(x=>x[0]))),ans:v[0],e:`${v[0]} [${v[1]}] ${v[2]} ${v[3]}`};
+  return {listen:v[0],q:"聽發音，選出你聽到的單字",o:shuffle([v[0]].concat(others.map(x=>x[0]))),ans:v[0],e:`${v[0]} [${v[1]}]：${v[3]}`};
+ }).map(q=>({...q,a:q.o.indexOf(q.ans)}));
+}
+function renderQuiz(u,box){
+ box.innerHTML=`<div class="mode" role="group" aria-label="作答模式"><button data-m="review" aria-pressed="${S.mode==="review"}">🌸 複習模式</button><button data-m="exam" aria-pressed="${S.mode==="exam"}">📝 考試模式</button></div>
+ <p class="hint">${S.mode==="review"?"點選答案後馬上看到對錯和解析。":"全部選完再按交卷，最後一起算分數。"}</p>
+ <div id="qs-${u.id}"></div>`;
+ box.querySelector(".mode").onclick=e=>{const b=e.target.closest("[data-m]");if(!b||S.mode===b.dataset.m)return;S.mode=b.dataset.m;save();sfx("tick");renderQuiz(u,box);};
+ const host=$("#qs-"+u.id);
+ const sets=[{id:u.id+"v",name:"字彙測驗",qs:vocabQuiz(u)}].concat(u.quizzes);
+ sets.forEach(set=>{const d=document.createElement("section");d.className="qset";host.appendChild(d);quizSet(d,set,set.id.endsWith("v")?()=>vocabQuiz(u):null);});
+}
+function quizSet(d,set,regen){
+ const qs=set.qs;let answered=0,okN=0;const picks={};
+ d.innerHTML=`<div class="qset-h"><h3 class="sec-t" style="margin:16px 0 4px">${set.name}</h3><small style="color:var(--ink2)">${qs.length} 題</small></div>${set.intro?`<p class="hint" style="margin-top:4px">${set.intro}</p>`:""}
+ ${qs.map((q,qi)=>`<div class="board q" data-q="${qi}"><p class="qt"><span class="qn">${qi+1}</span>${q.q}</p>${q.listen?`<button class="listen" data-l="${esc(q.listen)}">🔊 播放</button>`:""}<div class="opts">${q.o.map((o,oi)=>`<button class="opt" data-o="${oi}"><span class="lt">${"ABCD"[oi]}</span><span>${esc(o)}</span></button>`).join("")}</div><div class="exp">💡 ${q.e}</div></div>`).join("")}
+ <div class="row" style="justify-content:center">${S.mode==="exam"?`<button class="big" data-sub>交卷</button>`:""}<button class="big ghost" data-re>↺ 重做這組</button></div><div class="board score"></div>`;
+ const sc=d.querySelector(".score");
+ const finish=()=>{const r=okN/qs.length;sc.innerHTML=`<div class="n">${okN} / ${qs.length}</div>${r===1?"全對！收下滿分貼紙 ⭐":r>=.8?"好棒，差一點點就滿分！":"錯的題目看看解析，再做一次會更好"}`;sc.classList.add("show");
+  if(r===1){sfx("level");petals(56);if(S.mode==="exam")badge("perfect");gain(20);}else if(r>=.8){sfx("ok");petals(18);}};
+ d.onclick=e=>{
+  const l=e.target.closest("[data-l]");if(l){say(l.dataset.l);return;}
+  if(e.target.closest("[data-re]")){if(regen)set.qs=regen();quizSet(d,set,regen);sfx("tick");return;}
+  if(e.target.closest("[data-sub]")){if(Object.keys(picks).length<qs.length){const miss=[...d.querySelectorAll(".q")].find(c=>picks[c.dataset.q]===undefined);shake(miss);miss.scrollIntoView({behavior:"smooth",block:"center"});toast("📝","還有題目沒選喔","第 "+(+miss.dataset.q+1)+" 題");return;}
+   d.querySelectorAll(".q").forEach(c=>{const qi=+c.dataset.q,q=qs[qi],btns=c.querySelectorAll(".opt");btns.forEach(b=>b.classList.remove("pick"));btns[q.a].classList.add("ok");if(picks[qi]===q.a)okN++;else btns[picks[qi]].classList.add("no");c.querySelector(".exp").classList.add("show");});
+   e.target.closest("[data-sub]").remove();answered=qs.length;gain(okN*5);S.streak=0;save();drawStats();finish();return;}
+  const b=e.target.closest(".opt");if(!b)return;const c=b.closest(".q"),qi=+c.dataset.q,q=qs[qi],oi=+b.dataset.o;
+  if(S.mode==="exam"){if(answered===qs.length)return;c.querySelectorAll(".opt").forEach(x=>x.classList.remove("pick"));b.classList.add("pick");picks[qi]=oi;sfx("tick");return;}
+  if(c.dataset.done)return;c.dataset.done=1;answered++;const btns=c.querySelectorAll(".opt");btns[q.a].classList.add("ok");
+  if(oi===q.a){okN++;right(b);}else{b.classList.add("no");wrong(b);}
+  c.querySelector(".exp").classList.add("show");if(answered===qs.length)setTimeout(finish,300);};
+}
+
+/* ============ LAYOUT ============ */
+const SUBS=[["read","📖 課文"],["vocab","🃏 單字卡"],["phr","🎀 片語句型"],["game","🎮 小遊戲"],["quiz","📝 測驗"]];
+let curU=0,curS="read";
+function renderUnits(){$("#units").innerHTML=UNITS.map((u,i)=>`<button class="unit-tab" role="tab" aria-selected="${i===curU}" data-u="${i}">${u.tab}</button>`).join("");}
+$("#units").onclick=e=>{const b=e.target.closest("[data-u]");if(!b)return;curU=+b.dataset.u;sfx("tick");renderUnits();renderUnit();};
+function renderUnit(){const u=UNITS[curU];
+ $("#unitBox").innerHTML=`<div class="unit-head"><h2>${esc(u.title)}</h2><p>${u.zh}</p></div><div class="subs" role="tablist">${SUBS.map(s=>`<button class="sub-tab" role="tab" data-s2="${s[0]}" aria-selected="${s[0]===curS}">${s[1]}</button>`).join("")}</div><div class="panel" id="panel"></div>`;
+ $("#unitBox .subs").onclick=e=>{const b=e.target.closest("[data-s2]");if(!b)return;curS=b.dataset.s2;sfx("tick");renderUnit();};
+ const p=$("#panel");({read:renderPassage,vocab:renderVocab,phr:renderPhrases,game:renderGames,quiz:renderQuiz})[curS](u,p);}
+
+/* tools */
+const syncTools=()=>{$("#sndBtn").textContent=S.sound?"🔔 音效開":"🔕 音效關";$("#rateBtn").textContent=S.slow?"🐢 慢速":"🐇 正常";};
+$("#sndBtn").onclick=()=>{S.sound=!S.sound;save();syncTools();sfx("tick");};
+$("#rateBtn").onclick=()=>{S.slow=!S.slow;save();syncTools();say(S.slow?"slow":"normal");};
+$("#themeBtn").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=dark?"light":"dark";$("#themeBtn").textContent=dark?"🌙":"☀️";try{localStorage.setItem(KEY+"-theme",r.dataset.theme);}catch(e){}};
+try{const th=localStorage.getItem(KEY+"-theme");if(th){document.documentElement.dataset.theme=th;$("#themeBtn").textContent=th==="dark"?"☀️":"🌙";}}catch(e){}
+
+/* decorative flowers in hero */
+(function(){const h=$("#hero");const f=(x,y,s,o)=>`<svg class="flower" style="left:${x};top:${y};width:${s}px;opacity:${o}" viewBox="0 0 40 40" aria-hidden="true">${[0,72,144,216,288].map(a=>`<ellipse cx="20" cy="10" rx="7" ry="9" fill="#fff" transform="rotate(${a} 20 20)"/>`).join("")}<circle cx="20" cy="20" r="4.5" fill="#F3D88A"/></svg>`;
+ h.insertAdjacentHTML("beforeend",f("62%","58%",30,.9)+f("78%","70%",20,.8)+f("88%","42%",24,.85)+f("4%","72%",16,.6)+f("55%","24%",14,.7));})();
+
+S.streak=0;syncTools();drawStats();renderUnits();renderUnit();
+</script>
+</body>
+</html>
